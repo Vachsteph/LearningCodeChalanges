@@ -3,7 +3,7 @@ package file
 import java.io.File
 import java.util.Collections.max
 
-fun main(args :Array<String>) {
+fun main(args: Array<String>) {
 
     val ipToCount = mutableMapOf<String, Int>()
     File("src/60.ips.txt").forEachLine {
@@ -13,11 +13,8 @@ fun main(args :Array<String>) {
             ipToCount[it] = ipToCount[it]!! + 1
 
             ipToCount[it] = ipToCount.getOrDefault(it, 0) + 1
-
         } else {
-
             ipToCount[it] = 1
-
         }
     }
     val maxValue = max(ipToCount.values)
