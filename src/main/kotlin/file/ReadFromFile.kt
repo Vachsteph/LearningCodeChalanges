@@ -10,8 +10,6 @@ fun main(args: Array<String>) {
 
         if (ipToCount.contains(it)) {
 
-            ipToCount[it] = ipToCount[it]!! + 1
-
             ipToCount[it] = ipToCount.getOrDefault(it, 0) + 1
         } else {
             ipToCount[it] = 1
